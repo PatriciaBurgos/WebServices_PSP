@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://WebService/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WebService/">
+
+<xs:element name="division" type="tns:division" />
+
+<xs:element name="divisionResponse" type="tns:divisionResponse" />
+
+<xs:element name="hello" type="tns:hello" />
+
+<xs:element name="helloResponse" type="tns:helloResponse" />
+
+<xs:element name="login" type="tns:login" />
+
+<xs:element name="loginResponse" type="tns:loginResponse" />
+
+<xs:element name="multiplicacion" type="tns:multiplicacion" />
+
+<xs:element name="multiplicacionResponse" type="tns:multiplicacionResponse" />
+
+<xs:element name="programa" type="tns:programa" />
+
+<xs:element name="programaResponse" type="tns:programaResponse" />
+
+<xs:element name="resta" type="tns:resta" />
+
+<xs:element name="restaResponse" type="tns:restaResponse" />
+
+<xs:element name="suma" type="tns:suma" />
+
+<xs:element name="sumaResponse" type="tns:sumaResponse" />
+
+<xs:complexType name="resta">
+<xs:sequence>
+<xs:element name="res1" type="xs:string" minOccurs="0" />
+<xs:element name="res2" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="restaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="programa">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="programaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="login">
+<xs:sequence>
+<xs:element name="login" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="multiplicacion">
+<xs:sequence>
+<xs:element name="mul1" type="xs:string" minOccurs="0" />
+<xs:element name="mul2" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="multiplicacionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="suma">
+<xs:sequence>
+<xs:element name="dig1" type="xs:string" minOccurs="0" />
+<xs:element name="dig2" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sumaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="division">
+<xs:sequence>
+<xs:element name="div1" type="xs:string" minOccurs="0" />
+<xs:element name="div2" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="divisionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
