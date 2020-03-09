@@ -4,4 +4,6 @@
     <system systemId="http://localhost:8080/MenuWebService/MenuWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/MenuWebService/wsdl/localhost_8080/MenuWebService/MenuWebService.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/ServidorWebPractica/NewWebService?wsdl" uri="src/conf/xml-resources/web-service-references/NewWebService/wsdl/localhost_8080/ServidorWebPractica/NewWebService.wsdl"/>
     <system systemId="http://localhost:8080/ServidorWebPractica/NewWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/NewWebService/wsdl/localhost_8080/ServidorWebPractica/NewWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ServidorWebPractica/Correo?wsdl" uri="src/conf/xml-resources/web-service-references/Correo/wsdl/localhost_8080/ServidorWebPractica/Correo.wsdl"/>
+    <system systemId="http://localhost:8080/ServidorWebPractica/Correo?xsd=1" uri="src/conf/xml-resources/web-service-references/Correo/wsdl/localhost_8080/ServidorWebPractica/Correo.xsd_1.xsd"/>
 </catalog>

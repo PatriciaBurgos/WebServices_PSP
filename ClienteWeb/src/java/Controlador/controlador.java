@@ -92,29 +92,12 @@ public class controlador extends HttpServlet {
                 case "enviar":
                     String remitente = "utilcar1@gmail.com";
                     String clave = "util123car123";
-                    Properties props = System.getProperties();
-                    props.put("mail.smtp.host", "smtp.gmail.com");
-                    props.put("mail.smtp.user", remitente);
-                    props.put("mail.smtp.clave", clave);
-                    props.put("mail.smtp.auth", "true");    
-                    props.put("mail.smtp.starttls.enable", "true"); 
-                    props.put("mail.smtp.port", "25"); 
-                    Session session = Session.getDefaultInstance(props);
-                    MimeMessage message = new MimeMessage(session);
-
-                    try {
-                            message.setFrom(new InternetAddress(remitente));
-                            message.addRecipients(Message.RecipientType.TO, request.getParameter("destino"));
-                            message.setSubject(request.getParameter("asunto"));
-                            message.setText(request.getParameter("texto"));
-                            Transport transport = session.getTransport("smtp");
-                            transport.connect("smtp.gmail.com", remitente, clave);
-                            transport.sendMessage(message, message.getAllRecipients());
-                            transport.close();
-                    }
-                    catch (MessagingException me) {
-                            me.printStackTrace();   //Si se produce un error
-                    }
+                    String destino = request.getParameter("destino");
+                    String asunto = request.getParameter("asunto");
+                    String texto = request.getParameter("texto");
+                            
+                    correo(remitente,clave,destino,asunto,texto);  
+                    
                     response.sendRedirect("correoEnviado.jsp");
                     break;
                 default:
@@ -203,6 +186,12 @@ public class controlador extends HttpServlet {
         webservice.NewWebService_Service service = new webservice.NewWebService_Service();
         webservice.NewWebService port = service.getNewWebServicePort();
         return port.programa();
+    }
+
+    private static void correo(java.lang.String remitente, java.lang.String clave, java.lang.String destino, java.lang.String asunto, java.lang.String texto) {
+        webservice.Correo_Service service = new webservice.Correo_Service();
+        webservice.Correo port = service.getCorreoPort();
+        port.correo(remitente, clave, destino, asunto, texto);
     }
 
     

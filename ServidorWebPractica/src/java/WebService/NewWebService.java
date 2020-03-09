@@ -10,10 +10,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Properties;
 import java.util.StringJoiner;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -124,5 +130,7 @@ public class NewWebService {
         
         return resultado;
     }
+
+    
         
 }

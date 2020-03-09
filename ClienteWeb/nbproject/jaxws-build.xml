@@ -42,5 +42,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/webservice"/>
         <delete dir="${build.generated.dir}/jax-wsCache/NewWebService"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-NewWebService"/>
+    <target name="wsimport-client-Correo" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Correo"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Correo" destdir="${build.generated.dir}/jax-wsCache/Correo" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Correo/wsdl/localhost_8080/ServidorWebPractica/Correo.wsdl" catalog="catalog.xml" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ServidorWebPractica/Correo?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Correo/wsdl/localhost_8080/ServidorWebPractica/Correo.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Correo"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Correo">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Correo" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/webservice"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Correo"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-NewWebService, wsimport-client-Correo"/>
 </project>
