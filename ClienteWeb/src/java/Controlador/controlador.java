@@ -90,8 +90,8 @@ public class controlador extends HttpServlet {
                     response.sendRedirect("frmCorreo.jsp");
                     break;
                 case "enviar":
-                    String remitente = "utilcar1@gmail.com";
-                    String clave = "util123car123";
+                    String remitente = "";
+                    String clave = "";
                     String destino = request.getParameter("destino");
                     String asunto = request.getParameter("asunto");
                     String texto = request.getParameter("texto");
@@ -192,9 +192,13 @@ public class controlador extends HttpServlet {
         webservice.Correo_Service service = new webservice.Correo_Service();
         webservice.Correo port = service.getCorreoPort();
         port.correo(remitente, clave, destino, asunto, texto);
-    }
+    } 
 
-    
+    public static String mateo() {
+        webservice.NewWebService_Service service = new webservice.NewWebService_Service();
+        webservice.NewWebService port = service.getNewWebServicePort();
+        return port.mateo();
+    }
 
 
 }

@@ -12,6 +12,10 @@
 
 <xs:element name="loginResponse" type="tns:loginResponse" />
 
+<xs:element name="mateo" type="tns:mateo" />
+
+<xs:element name="mateoResponse" type="tns:mateoResponse" />
+
 <xs:element name="multiplicacion" type="tns:multiplicacion" />
 
 <xs:element name="multiplicacionResponse" type="tns:multiplicacionResponse" />
@@ -110,6 +114,16 @@
 </xs:complexType>
 
 <xs:complexType name="divisionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mateo">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="mateoResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0" />
 </xs:sequence>

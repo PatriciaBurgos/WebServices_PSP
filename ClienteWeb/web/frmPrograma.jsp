@@ -14,7 +14,7 @@
     </head>
     <body>
         <h1>C++</h1>
-        <%String salida = controlador.programa();%>
+        <%String salida = controlador.mateo();%>
         <h3><%=salida%></h3>
         <form name="frm_muestra" method="post" action="controlador">
             <input type="hidden" name="op" value="" />           

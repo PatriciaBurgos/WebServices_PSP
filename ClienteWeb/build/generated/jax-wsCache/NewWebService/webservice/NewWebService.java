@@ -44,6 +44,36 @@ public interface NewWebService {
 
     /**
      * 
+     * @param dig1
+     * @param dig2
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "suma", targetNamespace = "http://WebService/", className = "webservice.Suma")
+    @ResponseWrapper(localName = "sumaResponse", targetNamespace = "http://WebService/", className = "webservice.SumaResponse")
+    @Action(input = "http://WebService/NewWebService/sumaRequest", output = "http://WebService/NewWebService/sumaResponse")
+    public String suma(
+        @WebParam(name = "dig1", targetNamespace = "")
+        String dig1,
+        @WebParam(name = "dig2", targetNamespace = "")
+        String dig2);
+
+    /**
+     * 
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "programa", targetNamespace = "http://WebService/", className = "webservice.Programa")
+    @ResponseWrapper(localName = "programaResponse", targetNamespace = "http://WebService/", className = "webservice.ProgramaResponse")
+    @Action(input = "http://WebService/NewWebService/programaRequest", output = "http://WebService/NewWebService/programaResponse")
+    public String programa();
+
+    /**
+     * 
      * @param res1
      * @param res2
      * @return
@@ -77,24 +107,6 @@ public interface NewWebService {
         String mul1,
         @WebParam(name = "mul2", targetNamespace = "")
         String mul2);
-
-    /**
-     * 
-     * @param dig1
-     * @param dig2
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "suma", targetNamespace = "http://WebService/", className = "webservice.Suma")
-    @ResponseWrapper(localName = "sumaResponse", targetNamespace = "http://WebService/", className = "webservice.SumaResponse")
-    @Action(input = "http://WebService/NewWebService/sumaRequest", output = "http://WebService/NewWebService/sumaResponse")
-    public String suma(
-        @WebParam(name = "dig1", targetNamespace = "")
-        String dig1,
-        @WebParam(name = "dig2", targetNamespace = "")
-        String dig2);
 
     /**
      * 
@@ -136,9 +148,9 @@ public interface NewWebService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "programa", targetNamespace = "http://WebService/", className = "webservice.Programa")
-    @ResponseWrapper(localName = "programaResponse", targetNamespace = "http://WebService/", className = "webservice.ProgramaResponse")
-    @Action(input = "http://WebService/NewWebService/programaRequest", output = "http://WebService/NewWebService/programaResponse")
-    public String programa();
+    @RequestWrapper(localName = "mateo", targetNamespace = "http://WebService/", className = "webservice.Mateo")
+    @ResponseWrapper(localName = "mateoResponse", targetNamespace = "http://WebService/", className = "webservice.MateoResponse")
+    @Action(input = "http://WebService/NewWebService/mateoRequest", output = "http://WebService/NewWebService/mateoResponse")
+    public String mateo();
 
 }

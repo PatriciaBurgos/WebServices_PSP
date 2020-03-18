@@ -10,6 +10,18 @@
 <message name="loginResponse">
 <part name="parameters" element="tns:loginResponse" />
 </message>
+<message name="suma">
+<part name="parameters" element="tns:suma" />
+</message>
+<message name="sumaResponse">
+<part name="parameters" element="tns:sumaResponse" />
+</message>
+<message name="programa">
+<part name="parameters" element="tns:programa" />
+</message>
+<message name="programaResponse">
+<part name="parameters" element="tns:programaResponse" />
+</message>
 <message name="resta">
 <part name="parameters" element="tns:resta" />
 </message>
@@ -21,12 +33,6 @@
 </message>
 <message name="multiplicacionResponse">
 <part name="parameters" element="tns:multiplicacionResponse" />
-</message>
-<message name="suma">
-<part name="parameters" element="tns:suma" />
-</message>
-<message name="sumaResponse">
-<part name="parameters" element="tns:sumaResponse" />
 </message>
 <message name="division">
 <part name="parameters" element="tns:division" />
@@ -40,16 +46,24 @@
 <message name="helloResponse">
 <part name="parameters" element="tns:helloResponse" />
 </message>
-<message name="programa">
-<part name="parameters" element="tns:programa" />
+<message name="mateo">
+<part name="parameters" element="tns:mateo" />
 </message>
-<message name="programaResponse">
-<part name="parameters" element="tns:programaResponse" />
+<message name="mateoResponse">
+<part name="parameters" element="tns:mateoResponse" />
 </message>
 <portType name="NewWebService">
 <operation name="login">
 <input wsam:Action="http://WebService/NewWebService/loginRequest" message="tns:login" />
 <output wsam:Action="http://WebService/NewWebService/loginResponse" message="tns:loginResponse" />
+</operation>
+<operation name="suma">
+<input wsam:Action="http://WebService/NewWebService/sumaRequest" message="tns:suma" />
+<output wsam:Action="http://WebService/NewWebService/sumaResponse" message="tns:sumaResponse" />
+</operation>
+<operation name="programa">
+<input wsam:Action="http://WebService/NewWebService/programaRequest" message="tns:programa" />
+<output wsam:Action="http://WebService/NewWebService/programaResponse" message="tns:programaResponse" />
 </operation>
 <operation name="resta">
 <input wsam:Action="http://WebService/NewWebService/restaRequest" message="tns:resta" />
@@ -59,10 +73,6 @@
 <input wsam:Action="http://WebService/NewWebService/multiplicacionRequest" message="tns:multiplicacion" />
 <output wsam:Action="http://WebService/NewWebService/multiplicacionResponse" message="tns:multiplicacionResponse" />
 </operation>
-<operation name="suma">
-<input wsam:Action="http://WebService/NewWebService/sumaRequest" message="tns:suma" />
-<output wsam:Action="http://WebService/NewWebService/sumaResponse" message="tns:sumaResponse" />
-</operation>
 <operation name="division">
 <input wsam:Action="http://WebService/NewWebService/divisionRequest" message="tns:division" />
 <output wsam:Action="http://WebService/NewWebService/divisionResponse" message="tns:divisionResponse" />
@@ -71,9 +81,9 @@
 <input wsam:Action="http://WebService/NewWebService/helloRequest" message="tns:hello" />
 <output wsam:Action="http://WebService/NewWebService/helloResponse" message="tns:helloResponse" />
 </operation>
-<operation name="programa">
-<input wsam:Action="http://WebService/NewWebService/programaRequest" message="tns:programa" />
-<output wsam:Action="http://WebService/NewWebService/programaResponse" message="tns:programaResponse" />
+<operation name="mateo">
+<input wsam:Action="http://WebService/NewWebService/mateoRequest" message="tns:mateo" />
+<output wsam:Action="http://WebService/NewWebService/mateoResponse" message="tns:mateoResponse" />
 </operation>
 </portType>
 <binding name="NewWebServicePortBinding" type="tns:NewWebService">
@@ -87,6 +97,24 @@
 <soap:body use="literal" />
 </output>
 </operation>
+<operation name="suma">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="programa">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
 <operation name="resta">
 <soap:operation soapAction="" />
 <input>
@@ -97,15 +125,6 @@
 </output>
 </operation>
 <operation name="multiplicacion">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-</operation>
-<operation name="suma">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -132,7 +151,7 @@
 <soap:body use="literal" />
 </output>
 </operation>
-<operation name="programa">
+<operation name="mateo">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />

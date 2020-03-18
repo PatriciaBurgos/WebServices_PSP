@@ -27,6 +27,7 @@ public class ObjectFactory {
     private final static QName _ProgramaResponse_QNAME = new QName("http://WebService/", "programaResponse");
     private final static QName _Login_QNAME = new QName("http://WebService/", "login");
     private final static QName _Programa_QNAME = new QName("http://WebService/", "programa");
+    private final static QName _Mateo_QNAME = new QName("http://WebService/", "mateo");
     private final static QName _MultiplicacionResponse_QNAME = new QName("http://WebService/", "multiplicacionResponse");
     private final static QName _LoginResponse_QNAME = new QName("http://WebService/", "loginResponse");
     private final static QName _Multiplicacion_QNAME = new QName("http://WebService/", "multiplicacion");
@@ -35,6 +36,7 @@ public class ObjectFactory {
     private final static QName _RestaResponse_QNAME = new QName("http://WebService/", "restaResponse");
     private final static QName _Hello_QNAME = new QName("http://WebService/", "hello");
     private final static QName _Resta_QNAME = new QName("http://WebService/", "resta");
+    private final static QName _MateoResponse_QNAME = new QName("http://WebService/", "mateoResponse");
     private final static QName _HelloResponse_QNAME = new QName("http://WebService/", "helloResponse");
     private final static QName _DivisionResponse_QNAME = new QName("http://WebService/", "divisionResponse");
     private final static QName _Division_QNAME = new QName("http://WebService/", "division");
@@ -87,6 +89,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Mateo }
+     * 
+     */
+    public Mateo createMateo() {
+        return new Mateo();
+    }
+
+    /**
      * Create an instance of {@link Programa }
      * 
      */
@@ -132,6 +142,14 @@ public class ObjectFactory {
      */
     public HelloResponse createHelloResponse() {
         return new HelloResponse();
+    }
+
+    /**
+     * Create an instance of {@link MateoResponse }
+     * 
+     */
+    public MateoResponse createMateoResponse() {
+        return new MateoResponse();
     }
 
     /**
@@ -183,6 +201,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://WebService/", name = "programa")
     public JAXBElement<Programa> createPrograma(Programa value) {
         return new JAXBElement<Programa>(_Programa_QNAME, Programa.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Mateo }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "mateo")
+    public JAXBElement<Mateo> createMateo(Mateo value) {
+        return new JAXBElement<Mateo>(_Mateo_QNAME, Mateo.class, null, value);
     }
 
     /**
@@ -255,6 +282,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://WebService/", name = "resta")
     public JAXBElement<Resta> createResta(Resta value) {
         return new JAXBElement<Resta>(_Resta_QNAME, Resta.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link MateoResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://WebService/", name = "mateoResponse")
+    public JAXBElement<MateoResponse> createMateoResponse(MateoResponse value) {
+        return new JAXBElement<MateoResponse>(_MateoResponse_QNAME, MateoResponse.class, null, value);
     }
 
     /**

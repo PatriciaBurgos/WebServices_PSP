@@ -120,7 +120,7 @@ public class NewWebService {
         Runtime app = Runtime.getRuntime();
         String resultado="";
         try{
-            Process p = app.exec("C:\\Users\\patri\\Documents\\Proyecto1.exe");
+            Process p = app.exec("C:\\Users\\patri\\Documents\\devc\\Proyecto1.exe");
             //app.exec("C:\\Program Files (x86)\\Windows NT\\Accessories\\wordpad.exe");
             BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
             resultado = reader.readLine();
@@ -129,6 +129,24 @@ public class NewWebService {
         }
         
         return resultado;
+        
+    }
+    
+    
+
+    private static Integer randnumber() {
+        WSMateo.NewWebService_Service service = new WSMateo.NewWebService_Service();
+        WSMateo.NewWebService port = service.getNewWebServicePort();
+        return port.randnumber();
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "mateo")
+    public String mateo() {
+        String result = String.valueOf(randnumber());
+        return result; 
     }
 
     

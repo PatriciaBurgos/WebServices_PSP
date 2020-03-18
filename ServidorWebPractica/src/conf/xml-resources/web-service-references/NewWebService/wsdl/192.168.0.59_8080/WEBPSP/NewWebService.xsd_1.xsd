@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://controller/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://controller/">
+
+<xs:element name="division" type="tns:division" />
+
+<xs:element name="divisionResponse" type="tns:divisionResponse" />
+
+<xs:element name="hello" type="tns:hello" />
+
+<xs:element name="helloPatri" type="tns:helloPatri" />
+
+<xs:element name="helloPatriResponse" type="tns:helloPatriResponse" />
+
+<xs:element name="helloResponse" type="tns:helloResponse" />
+
+<xs:element name="login" type="tns:login" />
+
+<xs:element name="loginResponse" type="tns:loginResponse" />
+
+<xs:element name="mail" type="tns:mail" />
+
+<xs:element name="mailResponse" type="tns:mailResponse" />
+
+<xs:element name="multi" type="tns:multi" />
+
+<xs:element name="multiResponse" type="tns:multiResponse" />
+
+<xs:element name="randnumber" type="tns:randnumber" />
+
+<xs:element name="randnumberResponse" type="tns:randnumberResponse" />
+
+<xs:element name="resta" type="tns:resta" />
+
+<xs:element name="restaResponse" type="tns:restaResponse" />
+
+<xs:element name="suma" type="tns:suma" />
+
+<xs:element name="sumaResponse" type="tns:sumaResponse" />
+
+<xs:complexType name="randnumber">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="randnumberResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mail">
+<xs:sequence>
+<xs:element name="destinatario" type="xs:string" minOccurs="0" />
+<xs:element name="asunto" type="xs:string" minOccurs="0" />
+<xs:element name="cuerpo" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mailResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="division">
+<xs:sequence>
+<xs:element name="numer1" type="xs:double" />
+<xs:element name="numer2" type="xs:double" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="divisionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="suma">
+<xs:sequence>
+<xs:element name="numer1" type="xs:double" />
+<xs:element name="numer2" type="xs:double" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sumaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="login">
+<xs:sequence>
+<xs:element name="user" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloPatri">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloPatriResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="multi">
+<xs:sequence>
+<xs:element name="numer1" type="xs:double" />
+<xs:element name="numer2" type="xs:double" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="multiResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resta">
+<xs:sequence>
+<xs:element name="numero1" type="xs:double" />
+<xs:element name="numero2" type="xs:double" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="restaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
